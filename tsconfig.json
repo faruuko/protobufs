@@ -1,8 +1,7 @@
 {
   "compilerOptions": {
-    "outDir": "./generated/package/lib",
+    "outDir": "./package",
     "declaration": true,
-    "declarationDir": "./generated/package/types",
     "declarationMap": true,
     "target": "ES6",
     "module": "commonjs",
