@@ -28,7 +28,7 @@
     }
   },
   "files": [
-    "dist/**/*",
+    "generated/package/**/*",
     "package.json"
   ]
 }
