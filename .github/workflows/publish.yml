@@ -25,6 +25,8 @@ jobs:
         run: yarn install
 
       - name: Run semantice release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           yarn semantic-release
         working-directory: ${{ github.workspace }}
