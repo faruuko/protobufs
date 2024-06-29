@@ -14,16 +14,16 @@
     "ts-proto": "^1.180.0",
     "typescript": "^5.5.2"
   },
+  "dependencies": {
+    "@grpc/grpc-js": "^1.10.10",
+    "protobufjs": "^7.3.2"
+  },
   "exports": {
     "./packages/*": {
       "import": "./dist/lib/*.js",
       "require": "./dist/lib/*.js",
       "types": "./dist/types/*.d.ts"
     }
-  },
-  "dependencies": {
-    "@grpc/grpc-js": "^1.10.10",
-    "protobufjs": "^7.3.2"
   },
   "files": [
     "dist/**/*",
