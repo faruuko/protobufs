@@ -13,7 +13,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Install protobuf
-        uses: sudo apt install -y protobuf-compiler
+        run: sudo apt install -y protobuf-compiler
       - name: Install node.js
         uses: actions/setup-node@v4
         with:
