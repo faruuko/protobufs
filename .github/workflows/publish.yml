@@ -30,5 +30,3 @@ jobs:
         run: echo "@faruuko:registry = https://npm.pkg.github.com/ //npm.pkg.github.com:_authToken=${{ secrets.ORM_OPERATIONS_ACCESS_TOKEN }}" > ~/.npmrc
       - name: Publish package
         run: yarn publish --no-git-checks
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.ORM_OPERATIONS_ACCESS_TOKEN}}
