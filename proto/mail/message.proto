@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package mailmessage;
+
+message Empty {}
+
+message MailRequest {
+  string template = 1;
+  string receiver = 2;
+  MailOptionRequest options = 3;
+}
+
+message MailOptionRequest {
+  string name = 1;
+  int32 age = 2;
+  string gender = 3;
+  string avatar = 4;
+  string activationLink = 5;
+}
+
+message MailResponse {
+  string sent = 1;
+}

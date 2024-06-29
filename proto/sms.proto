@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package sms;
+
+import "mail/message.proto";
+
+message SmsRequest {
+  mailmessage.Empty empty = 1;
+}

@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package mailservice;
+
+import "mail/message.proto";
+
+service MailService {
+  rpc SendMail(mailmessage.MailRequest) returns (mailmessage.MailResponse);
+}

@@ -1,0 +1,28 @@
+{
+  "name": "@qasah/protobufs",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "generate-protos": "chmod +x ./build.sh && ./build.sh",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "ts-proto": "^1.180.0",
+    "typescript": "^5.5.2"
+  },
+  "exports": {
+    "./packages/*": {
+      "import": "./dist/lib/*.js",
+      "require": "./dist/lib/*.js",
+      "types": "./dist/types/*.d.ts"
+    }
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "^1.10.10",
+    "protobufjs": "^7.3.2"
+  },
+  "files": [
+    "dist/**/*",
+    "package.json"
+  ]
+}

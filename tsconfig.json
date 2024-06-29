@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/lib",
+    "declaration": true,
+    "declarationDir": "./dist/types",
+    "declarationMap": true,
+    "target": "ES6",
+    "module": "commonjs",
+    "rootDir": "./auto-generated/proto-output",
+    "strict": true,
+    "esModuleInterop": true,
+    "inlineSourceMap": true
+  },
+  "include": ["./auto-generated/proto-output/**/*"],
+  "exclude": ["node_modules"]
+}
