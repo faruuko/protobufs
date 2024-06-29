@@ -1,7 +1,9 @@
 {
   "name": "@faruuko/protobufs",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
+  "repository": "https://github.com/faruuko/protobufs",
+  "author": "Faruq Alli-Balogun <ab.faruq@sten.agency>",
   "publishConfig": {
     "access": "restricted",
     "registry": "https://npm.pkg.github.com/"
