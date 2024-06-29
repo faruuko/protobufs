@@ -37,6 +37,7 @@ jobs:
         run: yarn generate-protos
       - name: Build package
         run: yarn build
+
       - name: Authenticate
         run: echo "@faruuko:registry = https://npm.pkg.github.com/ //npm.pkg.github.com:_authToken=${{ secrets.ORM_OPERATIONS_ACCESS_TOKEN }}" > ~/.npmrc
       - name: Publish package
