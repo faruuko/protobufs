@@ -1,6 +1,6 @@
 {
   "name": "@faruuko/protobufs",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "license": "MIT",
   "repository": "https://github.com/faruuko/protobufs",
   "author": "Faruq Alli-Balogun <ab.faruq@sten.agency>",
@@ -21,7 +21,7 @@
     "protobufjs": "^7.3.2"
   },
   "exports": {
-    "./packages/*": {
+    "./*": {
       "import": "./package/*.js",
       "require": "./package/*.js",
       "types": "./package/*.d.ts"
