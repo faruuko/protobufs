@@ -25,7 +25,7 @@ jobs:
 
       - name: Run semantice release
         run: |
-          npx semantic-release
+          yarn semantic-release
         working-directory: ${{ github.workspace }}
 
       - name: Print package.json version (before)

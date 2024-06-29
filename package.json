@@ -9,6 +9,7 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "scripts": {
+    "semantic-release": "semantic-release",
     "generate-protos": "chmod +x ./build.sh && ./build.sh",
     "build": "tsc"
   },
