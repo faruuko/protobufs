@@ -1,7 +1,11 @@
 {
-  "name": "@qasah/protobufs",
+  "name": "@faruuko/protobufs",
   "version": "0.0.0",
   "license": "MIT",
+  "publishConfig": {
+    "access": "restricted",
+    "registry": "https://npm.pkg.github.com/"
+  },
   "scripts": {
     "generate-protos": "chmod +x ./build.sh && ./build.sh",
     "build": "tsc"

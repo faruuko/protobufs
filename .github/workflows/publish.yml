@@ -1,0 +1,32 @@
+name: Publish
+on:
+  push:
+    branches:
+      - main
+jobs:
+  Publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18.16.1
+          registry-url: https://npm.pkg.github.com/
+          scope: "@faruuko"
+      - name: Install dependencies
+        run: yarn install
+      - name: Genetate proto-ts
+        run: yarn generate-protos
+      - name: Build package
+        run: yarn build
+      - name: Authenticate
+        run: echo "@faruuko:registry = https://npm.pkg.github.com/ //npm.pkg.github.com:_authToken=${{ secrets.ORM_OPERATIONS_ACCESS_TOKEN }}" > ~/.npmrc
+      - name: Publish package
+        run: pnpm publish --no-git-checks
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.ORM_OPERATIONS_ACCESS_TOKEN}}
