@@ -20,8 +20,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          registry-url: https://npm.pkg.github.com/
-          scope: "@faruuko"
 
       - name: Install dependencies
         run: yarn install
@@ -31,31 +29,11 @@ jobs:
           yarn semantic-release
         working-directory: ${{ github.workspace }}
 
-      - name: Print package.json version (before)
-        run: |
-          echo "package.json version (before): $(jq -r .version package.json)"
-        working-directory: ${{ github.workspace }}
-
-      - name: Fetch Latest Commit
-        run: |
-          git fetch
-          git reset --hard origin/main
-
-      - name: Print package.json version (after)
-        run: |
-          echo "package.json version (after): $(jq -r .version package.json)"
-        working-directory: ${{ github.workspace }}
-
       - name: Genetate proto-ts
         run: yarn generate-protos
 
       - name: Build package
         run: yarn build
-
-      - name: Print Build Version
-        run: |
-          echo "Build version: $(jq -r .version package.json)"
-        working-directory: ${{ github.workspace }}
 
       - name: Publish Build Artifacts
         uses: actions/upload-artifact@v2
